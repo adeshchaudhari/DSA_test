@@ -1,18 +1,8 @@
-function palindrome(x){
-    if (x<0) {
-        return false;
-    }
-
-    const original = x;
-    let reverse = 0;
-
-    while (x>0){
-        reverse = reverse * 10 + x%10;
-        x = parseInt(x/10);
-    }
-
-    return reverse == original
-}
-
-const result = palindrome(213);
+var isPalindrome = function(x) {
+    pal = x.toString().split('').reverse().join('')
+    let newstring = x.toString()
+    return(pal===newstring)
+    
+};
+let result = isPalindrome(121)
 console.log(result)
